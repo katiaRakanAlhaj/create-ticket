@@ -4,7 +4,6 @@ import ViewServices from './components/view-services';
 import Login from './components/login';
 import Tickets from './components/tickets';
 import CreateTicket from './components/create-ticket';
-import Register from './components/register';
 import AddReport from './components/add-report';
 import Logout from './components/logout';
 const App = () => {
@@ -19,10 +18,6 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login setAccessToken={setAccessToken} />} />
-        <Route
-          path="/register"
-          element={<Register setAccessToken={setAccessToken} />}
-        />
         <Route
           path="/view-services"
           element={<ViewServices accessToken={accessToken} />}
