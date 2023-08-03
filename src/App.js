@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ViewServices from './components/view-services';
+import Login from './components/login';
+import Tickets from './components/tickets';
+import CreateTicket from './components/create-ticket';
+import Register from './components/register';
+import AddReport from './components/add-report';
+import Logout from './components/logout';
+const App = () => {
+  const [accessToken, setAccessToken] = useState('');
+  useEffect(() => {
+    const storedAccessToken = localStorage.getItem('accessToken');
+    if (storedAccessToken) {
+      setAccessToken(storedAccessToken);
+    }
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login setAccessToken={setAccessToken} />} />
+        <Route
+          path="/register"
+          element={<Register setAccessToken={setAccessToken} />}
+        />
+        <Route
+          path="/view-services"
+          element={<ViewServices accessToken={accessToken} />}
+        />
+        <Route
+          path="/tickets"
+          element={<Tickets accessToken={accessToken} />}
+        />
+        <Route
+          path="/create-ticket"
+          element={<CreateTicket accessToken={accessToken} />}
+        />
+        <Route
+          path="/add-report"
+          element={<AddReport accessToken={accessToken} />}
+        />
+        <Route path="/logout" element={<Logout accessToken={accessToken} />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
-
+};
 export default App;

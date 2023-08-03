@@ -1,0 +1,82 @@
+.image-flight {
+  background-image: url('images/flight.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 7rem;
+}
+.services {
+  text-align: center;
+}
+.column-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+.view-tickets {
+  color: white;
+  margin-top: 1rem;
+  font-size: 18px;
+  width: 15%;
+}
+.page {
+  width: 100%;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 1rem;
+  margin-right: 10px;
+}
+.create-ticket {
+  width: 11%;
+  color: white;
+  font-size: 18px;
+}
+.container {
+  padding: 2rem;
+}
+.tickets {
+  text-align: center;
+}
+.current-page {
+  color: grey;
+  font-weight: bold;
+  font-size: 20px;
+}
+.add-report {
+  width: 11%;
+  color: white;
+  font-size: 18px;
+}
+.create-ticket {
+  text-align: center;
+  color: white;
+}
+.create-ticket-title {
+  color: black;
+  text-align: center;
+}
+.logout {
+  width: 7%;
+  font-size: 18px;
+  color: white;
+}
+.add-report-title {
+  text-align: center;
+}
+.logout-title {
+  color: black;
+  text-align: center;
+}
+.logout-button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 25%;
+  color: white;
+  font-size: 18px;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 2rem;
+}
